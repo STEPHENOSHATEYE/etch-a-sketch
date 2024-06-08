@@ -16,10 +16,6 @@ const maxGrid = 64;
 let colorList = ['black', 'white', 'blue', 'green', 'red', 'orange', 'violet', 'purple', 'orange'];
 
 
-function generateColor(){
-    color = colorList[Math.floor(Math.random()*9)];
-    return color;
-}
 //set evente listner to active funtion when button is clicked;
 setGridSizeButton.addEventListener('click', () => {
     //The custom amount of squares to be appended in the grids container;
