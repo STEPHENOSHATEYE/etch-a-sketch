@@ -12,7 +12,14 @@ let numberOfGrids = 2;
 const squareOfNumberOfGrids = numberOfGrids**2;
 //Maximum number of grid;
 const maxGrid = 64;
+//array of color
+let colorList = ['black', 'white', 'blue', 'green', 'red', 'orange', 'violet', 'purple', 'orange'];
 
+
+function generateColor(){
+    color = colorList[Math.floor(Math.random()*9)];
+    return color;
+}
 //set evente listner to active funtion when button is clicked;
 setGridSizeButton.addEventListener('click', () => {
     //The custom amount of squares to be appended in the grids container;
@@ -53,7 +60,7 @@ function generateGrid(squareOfNumberOfGrids,numberOfGrids){
     const gridChild = document.querySelectorAll('.grid-child');
     gridChild.forEach((grid)=>{
         grid.addEventListener('mouseover',() =>{
-            grid.style.backgroundColor = 'blue';
+            grid.style.backgroundColor = colorList[Math.floor(Math.random()*9)];;
         });
     })
 }
