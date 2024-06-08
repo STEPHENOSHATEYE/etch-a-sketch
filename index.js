@@ -35,7 +35,6 @@ function generateGrid(squareOfNumberOfGrids,numberOfGrids){
         gridChild.style.width = `${((sizeOfGridContainer/numberOfGrids)-2)}px`
         gridChild.style.backgroundColor = 'white';
         gridContainer.appendChild(gridChild);
-        debugger;
     };
     //add event listener to all squares in the grid container
     const gridChild = document.querySelectorAll('.grid-child');
