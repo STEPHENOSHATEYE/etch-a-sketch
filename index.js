@@ -2,7 +2,8 @@
 const gridContainer = document.querySelector('.grids');
 //button object for customizing number of grids;
 const setGridSizeButton = document.querySelector('.grid-size');
-
+//button to reset the grid color;
+const resetButton = document.querySelector('.reset');
 //square has equal size, so gird is 500x500;
 const sizeOfGridContainer = 500;
 //The amount of squares to be appended in the grids container;
@@ -31,6 +32,13 @@ setGridSizeButton.addEventListener('click', () => {
     };
 });
 
+resetButton.addEventListener('click',() => {
+    const gridChildren = document.querySelectorAll('.grid-child');
+    //resets color for all grids in the container;
+    gridChildren.forEach((child) =>{
+        child.style.backgroundColor = 'white';
+    });
+});
 
 function generateGrid(squareOfNumberOfGrids,numberOfGrids){
     //for every iteration between 0 and squareOfNumberOfGrids;
