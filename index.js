@@ -9,21 +9,26 @@ const sizeOfGridContainer = 500;
 let numberOfGrids = 2;
 //The total amount of equal squares in the grid container;
 const squareOfNumberOfGrids = numberOfGrids**2;
+//Maximum number of grid;
+const maxGrid = 64;
 
 //set evente listner to active funtion when button is clicked;
 setGridSizeButton.addEventListener('click', () => {
-    const gridChildren = document.querySelectorAll('.grid-child');
     //The custom amount of squares to be appended in the grids container;
     let customNumberOfGrids = parseInt(prompt('Enter a number from 1-64: '));
-    //The custom total amount of equal squares in the grid container;
-    const squareOfCustomNumberOfGrids = customNumberOfGrids ** 2;
-    //removes every grid in gridContainer and makes it empty;
-    gridChildren.forEach((child) =>{
-        gridContainer.removeChild(child);
-    });
-
-    //generates new grids in the grid container;
-    generateGrid(squareOfCustomNumberOfGrids,customNumberOfGrids);
+    if (customNumberOfGrids <= 64){
+        const gridChildren = document.querySelectorAll('.grid-child');
+        //The custom total amount of equal squares in the grid container;
+        const squareOfCustomNumberOfGrids = customNumberOfGrids ** 2;
+        //removes every grid in gridContainer and makes it empty;
+        gridChildren.forEach((child) =>{
+            gridContainer.removeChild(child);
+        });
+        //generates new grids in the grid container;
+        generateGrid(squareOfCustomNumberOfGrids,customNumberOfGrids);
+    }else{
+        alert(`ERROR, Allowable number of grids is ${maxGrid}`);
+    };
 });
 
 
