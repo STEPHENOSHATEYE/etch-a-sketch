@@ -62,7 +62,3 @@ function generateGrid(squareOfNumberOfGrids,numberOfGrids){
 }
 
 generateGrid(squareOfNumberOfGrids,numberOfGrids);
-
-
-
-
