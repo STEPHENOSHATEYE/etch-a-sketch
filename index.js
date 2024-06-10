@@ -48,6 +48,7 @@ function generateGrid(squareOfNumberOfGrids,numberOfGrids){
     for (let i = 0; i < (squareOfNumberOfGrids); i++){
         const gridChild = document.createElement('div');
         gridChild.className = 'grid-child';
+        //the width of each grid is substrated by 2, to make it fit in the container because of its border size of 1px
         gridChild.style.width = `${((sizeOfGridContainer/numberOfGrids)-2)}px`
         gridChild.style.backgroundColor = 'white';
         gridContainer.appendChild(gridChild);
@@ -60,5 +61,5 @@ function generateGrid(squareOfNumberOfGrids,numberOfGrids){
         });
     })
 }
-
+//generates a default number of grid when page loads
 generateGrid(squareOfNumberOfGrids,numberOfGrids);
