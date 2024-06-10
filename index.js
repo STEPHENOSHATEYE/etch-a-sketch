@@ -13,7 +13,37 @@ const squareOfNumberOfGrids = numberOfGrids**2;
 //Maximum number of grid;
 const maxGrid = 64;
 //array of color
-let colorList = ['black', 'white', 'blue', 'green', 'red', 'orange', 'violet', 'purple', 'orange'];
+let colorList = [
+                "#4C9C8D",
+                "#A84FBF",
+                "#E6D26F",
+                "#5AD3D1",
+                "#FF6B53",
+                "#9370DB",
+                "#7FE817",
+                "#D6B5FF",
+                "#584D39",
+                "#FF9E6A",
+                "#4C9C8D",
+                "#A84FBF",
+                "#E6D26F",
+                "#5AD3D1",
+                "#FF6B53",
+                "#9370DB",
+                "#7FE817",
+                "#D6B5FF",
+                "#584D39",
+                "#F7D081",
+                "#8ECCCC",
+                "#D98CE0",
+                "#B0E57C",
+                "#8FD6E1",
+                "#E78A61",
+                "#D6B5FF",
+                "#C2F642",
+                "#957DAD",
+                "#FFC32B"
+];
 
 
 //set evente listner to active funtion when button is clicked;
@@ -57,7 +87,7 @@ function generateGrid(squareOfNumberOfGrids,numberOfGrids){
     const gridChild = document.querySelectorAll('.grid-child');
     gridChild.forEach((grid)=>{
         grid.addEventListener('mouseover',() =>{
-            grid.style.backgroundColor = colorList[Math.floor(Math.random()*9)];;
+            grid.style.backgroundColor = colorList[Math.floor(Math.random()*(colorList.length))];;
         });
     })
 }
